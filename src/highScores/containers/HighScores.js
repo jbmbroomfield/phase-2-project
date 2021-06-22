@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react'
 
 export default function HighScores(props) {
     const [state, setState] = useState([])
-    const url = `http://localhost:3000/high_scores_db`
+    // const url = `http://localhost:3000/high_scores_db`
+    const url = 'https://my-json-server.typicode.com/jbmbroomfield/phase-2-project-json-server/high_scores_db'
 
     useEffect(() => {
         fetch(url)

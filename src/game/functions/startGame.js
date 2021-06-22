@@ -4,7 +4,7 @@ import { rows } from '../globalProps'
 
 const startGame = (state, setState) => {
     const nextForecastCells = initialForecastCells()
-    fetch('https://jbmbroomfield.github.io/Data/high_scores.json')
+    fetch('https://jbmbroomfield.github.io/Data/levels_data.json')
     .then(response => response.json())
     .then(json => {
         const levelData = json[0]
