@@ -17,8 +17,8 @@ function App(props) {
 		<Router>
 			<div>
 				<Route exact path="/phase-2-project" component={Home} />
-				<Route exact path="/game" component={GameRoute} />
-				<Route exact path="/high-scores" component={HighScores} />
+				<Route exact path="/phase-2-project/game" component={GameRoute} />
+				<Route exact path="/phase-2-project/high-scores" component={HighScores} />
 			</div>
 		</Router>
 	);

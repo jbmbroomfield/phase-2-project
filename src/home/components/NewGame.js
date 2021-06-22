@@ -4,7 +4,7 @@ export default function NewGame(props) {
     return (
         <div className="new-game">
             <Link
-                to="/game"
+                to="/phase-2-project/game"
                 exact
             >
                 New Game
