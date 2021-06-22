@@ -11,7 +11,8 @@ export default function GameOver(props) {
     const submitHighScore = event => {
         console.log('submitting high score')
         event.preventDefault()
-        const url = `http://localhost:3000/high_scores_db`
+        // const url = `http://localhost:3000/high_scores_db`
+        const url = 'https://my-json-server.typicode.com/jbmbroomfield/phase-2-project-json-server/high_scores_db'
         const nameText = document.getElementById('name-text')
         const name = nameText.value
         const data = {"name": name, "score": state.score, "id": uuidv4()}
