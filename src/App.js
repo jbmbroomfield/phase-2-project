@@ -16,6 +16,7 @@ function App(props) {
 	return (
 		<Router>
 			<div>
+				hi
 				<Route exact path="/" component={Home} />
 				<Route exact path="/game" component={GameRoute} />
 				<Route exact path="/high-scores" component={HighScores} />
