@@ -4,7 +4,7 @@ const probabilityObject = {
     downArrow: 1,
     leftArrow: 1,
     crossBlue: 1,
-    crossRed: 1,
+    // crossRed: 1,
     bomb: 1,
 }
 

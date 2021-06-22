@@ -1,3 +1,4 @@
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from 'react'
 
 import { rows, columns } from '../globalProps'
@@ -37,6 +38,14 @@ const initialState = {
     step: 0,
     interval: null,
     score: 0,
+    level: 0,
+    levelData: {
+        red: 'red',
+        green: 'green',
+        blue: 'blue',
+    },
+    started: false,
+    paused: false,
 }
 
 export const Context = React.createContext()

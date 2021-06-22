@@ -2,7 +2,6 @@ import Matrix from '../components/Matrix'
 import { useContext } from 'react'
 import { Context } from './Store'
 import { columns } from '../globalProps'
-// import { choice } from '../random'
 
 
 export default function Forecast(props) {

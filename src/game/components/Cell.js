@@ -1,6 +1,7 @@
 import imagesObject from '../imagesObject'
 import { useContext } from 'react'
 import { Context } from '../containers/Store'
+import getCellDisplayValue from '../functions/getCellDisplayValue'
 
 export default function Cell(props) {
     // console.log('Cell')
@@ -18,7 +19,7 @@ export default function Cell(props) {
     }
 
     const getCLickable = greyedOut => {
-        if (greyedOut) {
+        if (greyedOut || state.paused) {
             return false
         }
         if (props.className === 'forecast') {
@@ -37,8 +38,6 @@ export default function Cell(props) {
 
     const handleClick = () => {
         if (!clickable) {
-            console.log(value, typeof value)
-            console.log(state.selectedItem, state.selectedItem.includes('Blue'))
             return
         }
         props.cellClick(props.rowIndex, props.columnIndex)
@@ -52,17 +51,13 @@ export default function Cell(props) {
     const style = {
         gridArea: `${rowStart} / ${columnStart} / ${rowEnd} / ${columnEnd}`
     }
-
-
-    const selected = props.className === 'forecast' && props.rowIndex === state.selectedItemIndex
-
-    let displayValue = ''
-    if (typeof value === 'number' || value === '') {
-        displayValue = value
-    } else {
-        displayValue = <img src={imagesObject[value]} alt={value} />
+    if (typeof value === 'number') {
+        style.color = 'purple'
     }
 
+    const displayValue = state.paused ? '' : getCellDisplayValue(value, state.levelData)
+
+    const selected = props.className === 'forecast' && props.rowIndex === state.selectedItemIndex
     return (
         <div
             className={`cell cell-${props.className}${clickable ? ' clickable' : ''}${selected ? ' selected' : ''}${greyedOut ? ' greyed-out' : ''}`}

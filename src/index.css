@@ -1,3 +1,7 @@
+body {
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
 .header {
 	grid-area: header;
 	background-color: red;
@@ -6,7 +10,7 @@
 .game-grid {
 	display: grid;
 	gap: 10px;
-	margin: 100px 100px;
+	margin: 50px 50px;
 }
 
 img {
@@ -16,10 +20,6 @@ img {
 	margin-right: auto;
 	display: block;
 	mix-blend-mode: multiply;
-}
-
-.clickable {
-	cursor: pointer;
 }
 
 .board {
@@ -49,6 +49,22 @@ img {
 	background-color: #999;
 	aspect-ratio: 1;
 	display: grid;
+	cursor: default;
+}
+
+.panel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* text-align: center; */
+}
+
+/* .panel-value {
+	margin: auto;
+} */
+
+.clickable {
+	cursor: pointer;
 }
 
 .greyed-out {

@@ -1,8 +1,8 @@
-import Game from './containers/Game'
-import Store from './containers/Store'
+import Game from './game/containers/Game'
+import Store from './game/containers/Store'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Home from './containers/Home'
-import HighScores from './containers/HighScores'
+import Home from './home/containers/Home'
+import HighScores from './highScores/containers/HighScores'
 
 function GameRoute(props) {
 	return (
