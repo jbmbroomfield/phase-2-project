@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/phase-2-project/static/css/main.41ab8730.chunk.css",
-    "main.js": "/phase-2-project/static/js/main.710fdf83.chunk.js",
-    "main.js.map": "/phase-2-project/static/js/main.710fdf83.chunk.js.map",
+    "main.css": "/phase-2-project/static/css/main.ff867d70.chunk.css",
+    "main.js": "/phase-2-project/static/js/main.81292f6a.chunk.js",
+    "main.js.map": "/phase-2-project/static/js/main.81292f6a.chunk.js.map",
     "runtime-main.js": "/phase-2-project/static/js/runtime-main.24065b54.js",
     "runtime-main.js.map": "/phase-2-project/static/js/runtime-main.24065b54.js.map",
     "static/js/2.85dcda3d.chunk.js": "/phase-2-project/static/js/2.85dcda3d.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.2bd48251.chunk.js": "/phase-2-project/static/js/3.2bd48251.chunk.js",
     "static/js/3.2bd48251.chunk.js.map": "/phase-2-project/static/js/3.2bd48251.chunk.js.map",
     "index.html": "/phase-2-project/index.html",
-    "static/css/main.41ab8730.chunk.css.map": "/phase-2-project/static/css/main.41ab8730.chunk.css.map",
+    "static/css/main.ff867d70.chunk.css.map": "/phase-2-project/static/css/main.ff867d70.chunk.css.map",
     "static/js/2.85dcda3d.chunk.js.LICENSE.txt": "/phase-2-project/static/js/2.85dcda3d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.24065b54.js",
     "static/js/2.85dcda3d.chunk.js",
-    "static/css/main.41ab8730.chunk.css",
-    "static/js/main.710fdf83.chunk.js"
+    "static/css/main.ff867d70.chunk.css",
+    "static/js/main.81292f6a.chunk.js"
   ]
 }
