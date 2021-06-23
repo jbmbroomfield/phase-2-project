@@ -41,6 +41,27 @@
       "level": "5 - Veteran",
       "date": "Wed Jun 23 2021",
       "id": "b962b560-21f6-4aab-845d-0fb30acd8eac"
+    },
+    {
+      "name": "Jim",
+      "score": 117,
+      "level": "2 - Apprentice",
+      "date": "Wed Jun 23 2021",
+      "id": "2b94c8ac-ef5e-41ca-8c33-3b0577aaf778"
+    },
+    {
+      "name": "Jim",
+      "score": 72,
+      "level": "1 - Initiate",
+      "date": "Wed Jun 23 2021",
+      "id": "c17c2d6a-7fe4-4700-8f72-9c5f90cb1227"
+    },
+    {
+      "name": "",
+      "score": 82,
+      "level": "1 - Initiate",
+      "date": "Wed Jun 23 2021",
+      "id": "5f42384f-4d87-4062-b46c-6d7a39267cb2"
     }
   ]
 }

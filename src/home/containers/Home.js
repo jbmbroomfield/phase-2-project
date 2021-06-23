@@ -6,7 +6,7 @@ export default function Home(props) {
     return (
         <div className="home">
             <div className="heading">
-                <h1>Phase 2 Project</h1>
+                <h1>React Game</h1>
             </div>
             <NewGame />
             <HighScores />
