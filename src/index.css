@@ -1,5 +1,47 @@
 body {
 	font-family: 'Noto Sans TC', sans-serif;
+	background-color: #DDD;
+	text-align: center;
+}
+
+.home {
+	display: grid;
+	gap: 10px;
+	margin: 0 50px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"heading heading"
+		"new-game high-scores"
+		"how-to-play how-to-play";
+}
+
+.heading {
+	grid-area: heading;
+}
+
+.new-game {
+	grid-area: new-game
+}
+
+.high-scores {
+	grid-area: high-scores;
+}
+
+.how-to-play {
+	grid-area: how-to-play;
+}
+
+.how-to-play-grid {
+	display: grid;
+	grid-template-columns: 9fr 1fr;
+	grid-template-rows: auto;
+	gap: 10px;
+}
+
+.text {
+	font-size: 9px;
+	text-align: left;
 }
 
 .header {
@@ -10,7 +52,7 @@ body {
 .game-grid {
 	display: grid;
 	gap: 10px;
-	margin: 50px 50px;
+	margin: 30px 60px;
 }
 
 img {
@@ -56,12 +98,7 @@ img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* text-align: center; */
 }
-
-/* .panel-value {
-	margin: auto;
-} */
 
 .clickable {
 	cursor: pointer;
@@ -80,4 +117,37 @@ img {
 	place-self: center;
 	max-width: 100%;
 	max-height: 100%;
+}
+
+table {
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	border-spacing: 0;
+	width: auto;
+}
+
+.row {
+	padding: 5px;
+}
+
+.row-odd {
+	background-color: #999;
+}
+
+.row-even {
+	background-color: #666;
+}
+
+td, th {
+	padding: 10px;
+}
+
+.right-align {
+	text-align: right;
+}
+
+.left-align {
+	text-align: left;
 }

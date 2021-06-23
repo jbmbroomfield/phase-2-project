@@ -53,6 +53,7 @@ const nextCellInLine = (currentCell, direction) => {
         case 'left':
             currentCell[1]--
             break
+        default:
     }
     if (
         currentCell[0] < 0 ||
@@ -73,13 +74,7 @@ function clearVisibleCells(visibleCells, boardCells, score) {
 }
 
 const clearCell = (boardCells, rowIndex, columnIndex, score, forceClear=false) => {
-    if (typeof score !== 'number') {
-        throw 'No number!'
-    }
     const value = boardCells[rowIndex][columnIndex]
-    if (value === 'crossRed' && !forceClear) {
-        return clearCross(boardCells, rowIndex, columnIndex, score)
-    }
     if (value === 'bomb' && !forceClear) {
         return clearSquare(boardCells, rowIndex, columnIndex, score)
     }
@@ -91,8 +86,8 @@ const clearCell = (boardCells, rowIndex, columnIndex, score, forceClear=false) =
 }
 
 const clearCross = (boardCells, rowIndex, columnIndex, score) => {
-    if (typeof score !== 'number') {
-        throw 'No number!'
+    if (boardCells[rowIndex][columnIndex] === 'bomb') {
+        return clearSquare(boardCells, rowIndex, columnIndex, score)
     }
     [boardCells, score] = clearCell(boardCells, rowIndex, columnIndex, score, true)
     const neighbors = [
@@ -113,13 +108,9 @@ const clearCross = (boardCells, rowIndex, columnIndex, score) => {
 }
 
 const clearSquare = (boardCells, rowIndex, columnIndex, score) => {
-    if (typeof score !== 'number') {
-        throw 'No number!'
-    }
     const clearCellResult1 = clearCell(boardCells, rowIndex, columnIndex, score, true)
     boardCells = clearCellResult1[0]
     score = clearCellResult1[1]
-    const neighbors = []
     for (const otherRowIndex of [
         rowIndex - 1,
         rowIndex,
@@ -133,9 +124,6 @@ const clearSquare = (boardCells, rowIndex, columnIndex, score) => {
 }
 
 const clearSquareRow = (boardCells, score, rowIndex, columnIndex, otherRowIndex) => {
-    if (typeof score !== 'number') {
-        throw 'No number!'
-    }
     for (const otherColumnIndex of [
         columnIndex - 1,
         columnIndex,

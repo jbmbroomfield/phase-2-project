@@ -3,7 +3,7 @@ import { Context } from '../containers/Store'
 import { columns } from '../globalProps'
 
 export default function Damage(props) {
-    const [state, setState] = useContext(Context)
+    const state = useContext(Context)[0]
     const levelData = state.levelData
     const style = {
         gridArea: `5 / ${columns + 4} / 7 / ${columns + 9}`,

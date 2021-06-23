@@ -1,9 +1,13 @@
-import { generateItem, choice } from '../random'
+import { generateItem } from '../random'
 import updateBoard from './updateBoard'
 import { rows } from '../globalProps'
 
 const startGame = (state, setState) => {
     const nextForecastCells = initialForecastCells()
+    const nextForecastCooldowns = []
+    for (let i = 0; i < rows; i++) {
+        nextForecastCooldowns.push(0)
+    }
     fetch('https://jbmbroomfield.github.io/Data/levels_data.json')
     .then(response => response.json())
     .then(json => {
@@ -14,6 +18,7 @@ const startGame = (state, setState) => {
             levelsData: json,
             levelData: levelData,
             forecastCells: nextForecastCells,
+            forecastCooldowns: nextForecastCooldowns,
             selectedItem: nextForecastCells[0][0],
             interval: setInterval(() => {
                 updateBoard(setState)

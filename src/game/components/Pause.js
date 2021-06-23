@@ -3,7 +3,7 @@ import { Context } from '../containers/Store'
 import { columns } from '../globalProps'
 import startGame from '../functions/startGame'
 
-export default function(props) {
+export default function Pause(props) {
     const [state, setState] = useContext(Context)
 
     const levelData = state.levelData

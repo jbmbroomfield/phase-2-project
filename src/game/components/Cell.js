@@ -1,4 +1,3 @@
-import imagesObject from '../imagesObject'
 import { useContext } from 'react'
 import { Context } from '../containers/Store'
 import getCellDisplayValue from '../functions/getCellDisplayValue'
@@ -10,9 +9,10 @@ export default function Cell(props) {
     const state = useContext(Context)[0]
     const value = props.value
 
+    const levelData = state.levelData
 
     const getGreyedOut = () => {
-        if (props.className !== 'forecast') {
+        if (props.className !== 'forecast' || !state.started || state.paused) {
             return false
         }
         return state.forecastCooldowns[props.rowIndex] > state.step
@@ -52,10 +52,10 @@ export default function Cell(props) {
         gridArea: `${rowStart} / ${columnStart} / ${rowEnd} / ${columnEnd}`
     }
     if (typeof value === 'number') {
-        style.color = 'purple'
+        style.color = levelData.purple
     }
 
-    const displayValue = state.paused ? '' : getCellDisplayValue(value, state.levelData)
+    const displayValue = state.paused || !state.started ? '' : getCellDisplayValue(value, state.levelData)
 
     const selected = props.className === 'forecast' && props.rowIndex === state.selectedItemIndex
     return (

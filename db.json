@@ -1,14 +1,46 @@
 {
   "high_scores_db": [
     {
-      "name": "Jimbo",
-      "score": 318,
-      "id": "6e9a8dce-8ddf-4891-98a7-2319bebd13da"
+      "name": "Jim",
+      "score": 351,
+      "level": "3 - Professional",
+      "date": "Wed Jun 23 2021",
+      "id": "da857c3c-2a39-463d-9f3b-9a374e438c71"
     },
     {
-      "name": "Jimbo",
-      "score": 223,
-      "id": "72849871-cae1-4bf0-81e4-31fb18a1c78c"
+      "name": "Jim",
+      "score": 412,
+      "level": "3 - Professional",
+      "date": "Wed Jun 23 2021",
+      "id": "7b373ceb-a65c-4fdc-a9a6-ac95755f292b"
+    },
+    {
+      "name": "Jim",
+      "score": 3,
+      "level": "0 - Recruit",
+      "date": "Wed Jun 23 2021",
+      "id": "de345564-b418-4f2d-8e91-41c647752fa2"
+    },
+    {
+      "name": "Jim",
+      "score": 232,
+      "level": "2 - Apprentice",
+      "date": "Wed Jun 23 2021",
+      "id": "d27b2937-31e4-4aa4-8532-6bc902c68127"
+    },
+    {
+      "name": "Jim",
+      "score": 140,
+      "level": "2 - Apprentice",
+      "date": "Wed Jun 23 2021",
+      "id": "f0a915af-f61a-48a7-84ca-84b1b9960f02"
+    },
+    {
+      "name": "Jim",
+      "score": 885,
+      "level": "5 - Veteran",
+      "date": "Wed Jun 23 2021",
+      "id": "b962b560-21f6-4aab-845d-0fb30acd8eac"
     }
   ]
 }

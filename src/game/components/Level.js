@@ -3,7 +3,7 @@ import { Context } from '../containers/Store'
 import { columns } from '../globalProps'
 
 export default function Level(props) {
-    const [state, useState] = useContext(Context)
+    const state = useContext(Context)[0]
     const levelData = state.levelData
     const style = {
         gridArea: `1 / ${columns + 4} / 3 / ${columns + 9}`,

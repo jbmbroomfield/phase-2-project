@@ -5,17 +5,25 @@ import { useHistory } from 'react-router-dom'
 
 export default function GameOver(props) {
 
-    const [state, setState] = useContext(Context)
+    const state = useContext(Context)[0]
     const history = useHistory()
 
     const submitHighScore = event => {
-        console.log('submitting high score')
         event.preventDefault()
-        // const url = `http://localhost:3000/high_scores_db`
-        const url = 'https://my-json-server.typicode.com/jbmbroomfield/phase-2-project-json-server/high_scores_db'
+        const url = `http://localhost:3000/high_scores_db`
+        // const url = 'https://my-json-server.typicode.com/jbmbroomfield/phase-2-project-json-server/high_scores_db'
         const nameText = document.getElementById('name-text')
         const name = nameText.value
-        const data = {"name": name, "score": state.score, "id": uuidv4()}
+        const levelData = state.levelData
+        const date = new Date()
+        const dateString = date.toDateString()
+        const data = {
+            "name": name,
+            "score": state.score,
+            "level": `${levelData.id} - ${levelData.name}`,
+            "date": dateString,
+            "id": uuidv4(),
+        }
         const configObject = {
             method: 'POST',
             headers: {
@@ -24,9 +32,8 @@ export default function GameOver(props) {
             },
             body: JSON.stringify(data)
         }
-        console.log({data})
         fetch(url, configObject)
-        history.push('/high-scores')
+        history.push('/phase-2-project/high-scores')
     }
 
     return (

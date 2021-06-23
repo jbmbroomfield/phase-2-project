@@ -1,8 +1,5 @@
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from 'react'
-
 import { rows, columns } from '../globalProps'
-
 
 const initialRow = rowIndex => {
     const row = []
@@ -17,16 +14,12 @@ for (let rowIndex = 0; rowIndex < rows; rowIndex++) {
     initialBoardCells.push(initialRow(rowIndex))
 }
 
-
-
 const initialForecastCells = []
 const initialForecastCooldowns = []
 for (let i = 0; i < rows; i++) {
-    // initialForecastCells.push([generateItem()])
     initialForecastCells.push([''])
     initialForecastCooldowns.push(0)
 }
-
 
 const initialState = {
     boardCells: initialBoardCells,
@@ -43,6 +36,7 @@ const initialState = {
         red: 'red',
         green: 'green',
         blue: 'blue',
+        purple: 'purple',
     },
     started: false,
     paused: false,
